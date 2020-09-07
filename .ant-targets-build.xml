@@ -1,0 +1,16 @@
+compile
+createWar
+delete-Db
+deployWar
+generatePortlets
+h2-run
+hsqldb-run
+menu
+sql-import-h2
+sql-insert
+sql-query
+test
+updateClass
+updateOX
+updateSchema
+zip

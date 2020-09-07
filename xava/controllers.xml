@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE controllers SYSTEM "dtds/controllers.dtd">
+
+<controllers>
+
+	<controller name="Prescription">
+		<extends controller="Typical"/>
+		<action name="generatePdf"
+			mode="detail" confirm="true"
+			class="ec.cjpq.cmc.actions.PrescriptionReportAction"
+			image="images/pdf.gif"
+			keystroke="Control P"/>
+	</controller>
+
+    <!-- Environment variable:
+    <env-var name="App_DEFAULT_YEAR" value="2015"/> 
+    -->
+    
+    <!-- Session object:
+    <object name="App_activeYear" class="java.lang.Integer" value="2015" 
+    	    scope="global"/>    
+    -->
+    
+    <!-- Controller:
+    <controller name="Teacher">
+    	<extends controller="Typical"/>
+    	<action name="new" image="new.gif" keystroke="Control N"
+        	class="actions.CreateTeacher">
+    	</action>
+	</controller>    
+    -->
+    
+</controllers>

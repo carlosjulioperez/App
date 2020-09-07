@@ -1,0 +1,5 @@
+id,description
+1,ROLE_ADMIN
+2,ROLE_USER
+3,ROLE_ADMIN_CMC
+4,ROLE_CMC

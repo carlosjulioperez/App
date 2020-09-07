@@ -1,0 +1,900 @@
+name,value
+gender,Masculino
+gender,Femenino
+blood.type,A+
+blood.type,A-
+blood.type,B+
+blood.type,B-
+blood.type,AB+
+blood.type,AB-
+blood.type,O+
+blood.type,O-
+parent,Hermana/o
+parent,Materno
+parent,Paterno
+familiar,Abuela
+familiar,Abuelo
+familiar,Hermana
+familiar,Hermano
+familiar,Madre
+familiar,Padre
+familiar,Prima/o
+familiar,Sobrina
+familiar,Sobrino
+familiar,Tía
+familiar,Tío
+frequency.unit,días
+frequency.unit,horas
+frequency.unit,minutos
+frequency.unit,segundos
+frequency.unit,semanas
+frequency.unit,cuando sea necesario
+dose.unit,mL    
+dose.unit,mg    
+dose.unit,L     
+dose.unit,kg    
+dose.unit,mmol  
+dose.unit,ug    
+dose.unit,unidad
+drug.form,Aerosol dosificador
+drug.form,Aerosol con propelentes
+drug.form,Barra masticable
+drug.form,Perla
+drug.form,Oblea
+drug.form,Bolo
+drug.form,Cápsula
+drug.form,Cartucho
+drug.form,Cápsula de liberación retardada
+drug.form,Pasta
+drug.form,Cable
+drug.form,Crema
+drug.form,Jeringa
+drug.form,Gotas
+drug.form,Apósito
+drug.form,Cápsula con cubierta entérica
+drug.form,Comprimido con cubierta entérica
+drug.form,Elixir
+drug.form,Emulsión
+drug.form,Enema
+drug.form,Comprimido efervescente
+drug.form,Hilo dental
+drug.form,Gas
+drug.form,Granulado para suspensión de liberación retardada
+drug.form,Granulado efervescente
+drug.form,Gel
+drug.form,Gel de liberación controlada
+drug.form,Glóbulos
+drug.form,Gránulos
+drug.form,Injerto
+drug.form,goma masticable
+drug.form,Implante
+drug.form,Inserto
+drug.form,Inserto de liberación prolongada
+drug.form,Jalea
+drug.form,Equipo
+drug.form,Hoja
+drug.form,Liposoma
+drug.form,Liquido
+drug.form,Loción
+drug.form,Pastilla
+drug.form,Enjuague bucal para hacer gárgaras
+drug.form,Ungüento
+drug.form,Ovulos
+drug.form,Cataplasma
+drug.form,Parche
+drug.form,Polvo con recubrimiento entérico
+drug.form,Polvo efervescente
+drug.form,Lápiz
+drug.form,Comprimido masticable
+drug.form,Yeso
+drug.form,Inhalador
+drug.form,Premezcla de fármacos
+drug.form,Píldora (oral)
+drug.form,Polvo
+drug.form,Polvo de liberación controlada
+drug.form,Polvo para suspensión de liberación controlada
+drug.form,Pasta
+drug.form,Polvo para suspensión
+drug.form,Polvo para solución
+drug.form,Anillo de liberación lenta
+drug.form,Suspensión de liberación retardada
+drug.form,Shampoo
+drug.form,Spray inhalador
+drug.form,Solución
+drug.form,Jabón en barra
+drug.form,Cápsula dispersable
+drug.form,Esponja
+drug.form,Aerosol
+drug.form,Supositorio de liberación controlada
+drug.form,Cápsula de liberación controlada
+drug.form,Disco de liberación controlada
+drug.form,Jarabe de liberación controlada
+drug.form,Comprimido de liberación controlada
+drug.form,Stick
+drug.form,Tira
+drug.form,Supositorio
+drug.form,Suspensión
+drug.form,Sutura
+drug.form,Algodón
+drug.form,Jarabe
+drug.form,Comprimido
+drug.form,Comprimido masticable
+drug.form,Comprimido dispersable
+drug.form,Comprimido de liberación retardada
+drug.form,Comprimidos de rápida disolución
+drug.form,Comprimido sublingual
+drug.form,Cinta
+drug.form,Dilatador de pezones
+drug.form,Té de hierbas
+drug.form,Pasta Dentífrica
+drug.form,Sin asignar
+drug.form,Oblea
+drug.form,Toallita
+drug.route,Aplicar externamente
+drug.route,Bucal
+drug.route,Dental
+drug.route,Epidural
+drug.route,Tubo endotraqueal
+drug.route,Tubo de gastrostomía
+drug.route,Irrigante GU
+drug.route,Sumergir (mojar) Parte del Cuerpo
+drug.route,Intra-arterial
+drug.route,Intrabursal
+drug.route,Intracardiaco
+drug.route,Intracervical (útero)
+drug.route,Intradérmica
+drug.route,Inhalación
+drug.route,Arteria intrahepática
+drug.route,Intramuscular
+drug.route,Intranasal
+drug.route,Intraocular
+drug.route,Intraperitoneal
+drug.route,Intrasinovial
+drug.route,Intratecal
+drug.route,Intrauterino
+drug.route,intravenoso
+drug.route,Boca/Garganta
+drug.route,Mucosa
+drug.route,Nasal
+drug.route,Nasogástrico
+drug.route,Cánula nasal
+drug.route,Tubo nasotraqueal
+drug.route,Oftálmico
+drug.route,Ótico
+drug.route,Otros/Misc
+drug.route,Perfusión
+drug.route,Oral
+drug.route,Rectal
+drug.route,Mascara de Ventilación
+drug.route,Vendaje Mojado
+drug.route,Subcutáneo
+drug.route,Sublingual
+drug.route,Tópico
+drug.route,Traqueotomía
+drug.route,Transdérmico
+drug.route,Translingual
+drug.route,Uretral
+drug.route,Vaginal
+drug.route,Ventimask
+drug.route,Herida
+diet.therapeutic,Nada por la Boca / NPO
+diet.therapeutic,Bypass Gástrico Etapa 1
+diet.therapeutic,Bypass Gástrico Etapa 2
+diet.therapeutic,Bypass Gástrico Etapa 3
+diet.therapeutic,Bypass Gástrico Etapa 4
+diet.therapeutic,Solo Líquido sin Lactosa
+diet.therapeutic,Quirúrgica - Baja en Lactosa
+diet.therapeutic,Post-Gastrectomía
+diet.therapeutic,Normal
+diet.therapeutic,Mecánica Suave / Suave Dental
+diet.therapeutic,Disfagia - Puré
+diet.therapeutic,Disfagia - Alterada
+diet.therapeutic,Disfagia - Avanzado
+diet.therapeutic,Cardíaco
+diet.therapeutic,Bajo en Grasas
+diet.therapeutic,Sin Sales Añadidas - SSA
+diet.therapeutic,2 gramos de sodio
+diet.therapeutic,Renal
+diet.therapeutic,Prerenal
+diet.therapeutic,GI Suave - Bajo residuo
+diet.therapeutic,Blanda
+diet.therapeutic,Corbohidrato consistente
+diet.therapeutic,Dieta para Diabetes Gestacional
+diet.therapeutic,Hiperemesis
+diet.therapeutic,Pequeñas comidas frecuentes
+diet.therapeutic,Dieta Líquida Clara
+diet.therapeutic,Dieta Líquida / Sin azúcares concentrados
+diet.therapeutic,Solo líquidos
+diet.therapeutic,Neutropénica
+diet.therapeutic,Sin Gluten
+diet.therapeutic,Alimentación con los Dedos
+medication.dosage,1 vez al día
+medication.dosage,1 vez al día por la mañana
+medication.dosage,1 vez al día por la tarde
+medication.dosage,1 vez al día al acostarse
+medication.dosage,2 veces al día
+medication.dosage,3 veces al día
+medication.dosage,3 veces al día, antes de las comidas
+medication.dosage,3 veces al día, con las comidas
+medication.dosage,4 veces al día
+medication.dosage,cada 2 horas
+medication.dosage,cada 4 horas
+medication.dosage,cada 6 horas
+medication.dosage,cada 8 horas
+medication.dosage,cada 12 horas
+medication.dosage,cada dos días
+medication.dosage,1 vez por semana
+medication.dosage,cada 2 semanas
+medication.dosage,cada 28 días
+medication.dosage,cada mes
+medication.dosage,según sea necesario
+medication.dosage,1 vez
+occupation,Desempleado
+occupation,Administrador
+occupation,Agrónomo
+occupation,Astronauta
+occupation,Arqueólogo
+occupation,Arquitecto
+occupation,Auditor
+occupation,Autor
+occupation,Artista
+occupation,Bailarina
+occupation,Bajista
+occupation,Contramaestre
+occupation,Calderero
+occupation,Librero
+occupation,Constructor
+occupation,Taxista
+occupation,Policía
+occupation,Ebanista
+occupation,Caligrafista
+occupation,Call girl
+occupation,Camarógrafo
+occupation,Consejero de Campamento
+occupation,Diseñador de automóviles
+occupation,Cardiólogo
+occupation,Carpintero
+occupation,Cartógrafo
+occupation,Dibujante
+occupation,Carretero
+occupation,Cajero
+occupation,Celebridad
+occupation,Violonchelista
+occupation,Crítico
+occupation,CEO (Director Ejecutivo)
+occupation,CFO (Director Financiero)
+occupation,Velero (velas)
+occupation,Vendedor ambulante
+occupation,Chófer
+occupation,Animador
+occupation,Quesero
+occupation,Chef
+occupation,Ingeniero químico
+occupation,Técnico químico
+occupation,Químico
+occupation,Jefe de Policía
+occupation,Oficial de primera
+occupation,Deshollinador
+occupation,Pedicuro
+occupation,Quiropráctico
+occupation,Coreógrafo
+occupation,Acomodador de iglesias
+occupation,Agente de la CIA 
+occupation,Predicador de circuito
+occupation,Funcionario público
+occupation,Ingeniero Civil
+occupation,Clarinetista
+occupation,Limpiador
+occupation,Empleado
+occupation,Relojero
+occupation,Entrenador
+occupation,Cochero
+occupation,Guardia costera
+occupation,Zapatero
+occupation,Científico cognitivo
+occupation,Columnista
+occupation,Comediante
+occupation,Fabricante de brújulas
+occupation,Compositor
+occupation,Ingeniero informático
+occupation,Programador informático
+occupation,Conserje
+occupation,Director de orquesta
+occupation,Condestable
+occupation,Ingeniero constructor
+occupation,Administrador de obra
+occupation,Trabajador de la construcción
+occupation,Consul
+occupation,Consultor
+occupation,Administrador de contrato
+occupation,Inspector
+occupation,Juez de instrucción
+occupation,Director corporativo
+occupation,Carcelero
+occupation,Corrector
+occupation,Corresponsal
+occupation,Cosmetólogo
+occupation,Cosmonauta
+occupation,Verdulero
+occupation,Diseñador de ropa
+occupation,Mensajero
+occupation,Bufón de corte
+occupation,Vaquero
+occupation,Contador Público
+occupation,Artesano
+occupation,Ingeniero creativo
+occupation,Pregonero
+occupation,Arrendatario
+occupation,Criptógrafo
+occupation,Criptozoólogo
+occupation,Cristalógrafo
+occupation,Curandero
+occupation,Guardia
+occupation,Aduanero
+occupation,Cuchillero
+occupation,Bailarín
+occupation,Instructor de baile
+occupation,Administrador de base de datos (DBA)
+occupation,Diputado
+occupation,Diputado (parlamentario)
+occupation,Demógrafo
+occupation,Demolicionista
+occupation,Dentista
+occupation,Dermatólogo
+occupation,Diseñador
+occupation,Detective
+occupation,Lapidario de diamantes
+occupation,Dictador
+occupation,Dietista
+occupation,Diplomático
+occupation,Director
+occupation,Disc jockey
+occupation,Transportista
+occupation,Destilador
+occupation,Buzo
+occupation,Trabajador de muelle
+occupation,Documentalista
+occupation,Doctor (Doctorado)
+occupation,Doctor en educación
+occupation,Doctor (Médico)
+occupation,Doctor en terapia física
+occupation,Criador de perros
+occupation,Perrero
+occupation,Paseador de perros
+occupation,Trabajador doméstico
+occupation,Dominatrix
+occupation,Entrenador de burros
+occupation,Delineante
+occupation,Dramaturgo
+occupation,Mayorista
+occupation,Conductor de carro
+occupation,Modista
+occupation,Instructor militar
+occupation,Conductor
+occupation,Traficante
+occupation,Baterista
+occupation,Tonelero
+occupation,Yesero
+occupation,Pintor
+occupation,Ecologista
+occupation,Economista
+occupation,Editor
+occupation,Educacionista
+occupation,Educador
+occupation,Egiptólogo
+occupation,Ingeniero eléctrico
+occupation,Electricista
+occupation,Ascensorista
+occupation,Embalsamador
+occupation,Embriólogo
+occupation,Técnico de emergencias médicas
+occupation,Maquinista
+occupation,Ingeniero
+occupation,Grabador
+occupation,Enólogo
+occupation,Entomólogo
+occupation,Empresario
+occupation,Científico ambiental
+occupation,Ergonomista
+occupation,Escort
+occupation,Agente inmobiliario
+occupation,Esteticista
+occupation,Etnólogo
+occupation,Etólogo
+occupation,Etimologista
+occupation,Evangelista
+occupation,Tesorero
+occupation,Ejecutiva
+occupation,Bailarina exótica
+occupation,Exterminador
+occupation,Extra
+occupation,Halconero
+occupation,Granjero
+occupation,Herrador
+occupation,Diseñador de modas
+occupation,Agente FBI
+occupation,Peletero
+occupation,Cerca
+occupation,Barquero
+occupation,Cineasta
+occupation,Productor
+occupation,Asesor financiero
+occupation,Analista financiero
+occupation,Gerente de finanzas
+occupation,Planificador financiero
+occupation,Financiero
+occupation,Departamento de bomberos
+occupation,Oficial de bomberos
+occupation,Bombero
+occupation,Primer oficial
+occupation,Pescadero
+occupation,Pescador
+occupation,Montador
+occupation,Flautista
+occupation,Químico de alimentos
+occupation,Auxiliar de vuelo
+occupation,Mecánico de velo
+occupation,Instructor de vuelo
+occupation,Gerente de planta
+occupation,Florista
+occupation,Flautista
+occupation,Capataz
+occupation,Forense
+occupation,Frutero
+occupation,Peletero
+occupation,Guardabosques
+occupation,Anfitrión de programa de juegos
+occupation,Diseñador de juegos
+occupation,Basurero
+occupation,Jardinero
+occupation,Portero
+occupation,Tallador de gemas
+occupation,Genealogista
+occupation,General
+occupation,Gesodesta
+occupation,Geógrafo
+occupation,Geólogo
+occupation,Geómetra
+occupation,Geofísico
+occupation,Agente del gobierno
+occupation,Gobernador
+occupation,Filólogo
+occupation,Artista gráfico
+occupation,Sepulturero
+occupation,Granadero
+occupation,Tendero
+occupation,Guía
+occupation,Guitarrista
+occupation,Armero
+occupation,Ginecólogo
+occupation,Garret
+occupation,Mercero
+occupation,Arpista
+occupation,Peluquero
+occupation,Personal de mantenimiento
+occupation,Capitán de Puerto
+occupation,Sombrerero
+occupation,Guardia
+occupation,Herbalista
+occupation,Pastor
+occupation,Historiador
+occupation,Historiador
+occupation,Calcetero
+occupation,Entrenador de Caballos
+occupation,Hotelero
+occupation,Pintor de casas
+occupation,Ama de casa
+occupation,Cazador
+occupation,Ingeniero hidraulico
+occupation,Iluminador
+occupation,Ilusionista
+occupation,Ilustrador
+occupation,Importador
+occupation,Diseñador industrial
+occupation,Ingeniero industrial
+occupation,Industrial
+occupation,Soldado de infantería
+occupation,Arquitecto de información
+occupation,Tecnólogo de información
+occupation,Entintador
+occupation,Mesonero
+occupation,Instructor
+occupation,Asegurador
+occupation,Oficial de inteligencia
+occupation,Decorador de interiores
+occupation,Internista (Médico)
+occupation,Intérprete
+occupation,Interrogador
+occupation,Inventor
+occupation,Investigador
+occupation,Analista de inversiones
+occupation,Banquero de inversiones
+occupation,Corredor de inversiones
+occupation,Ferretero
+occupation,Maestro herrero
+occupation,Herrero
+occupation,Joyero
+occupation,Periodista
+occupation,Jurista
+occupation,Juez
+occupation,Kinesiólogo
+occupation,Rey
+occupation,Ayundante de laboratorio
+occupation,Peón
+occupation,Terrateniente
+occupation,Paisajista
+occupation,Farero
+occupation,Lavandero
+occupation,Agente de aplicación de ley
+occupation,Abogado
+occupation,Trabajador del plomo
+occupation,Maestro
+occupation,Diseñador de niveles
+occupation,Bibliotecario
+occupation,Asistente de bibliotecario
+occupation,Libretista
+occupation,Socorrista
+occupation,Técnico de iluminación
+occupation,Juez de línea
+occupation,Lingüista
+occupation,Oficial de crédito
+occupation,Lobbyist
+occupation,Cerrajero
+occupation,Operador logístico
+occupation,Leñador
+occupation,Letrista
+occupation,Editor de revista
+occupation,Mago
+occupation,Magistrado
+occupation,Doncella
+occupation,Cartero
+occupation,Maquillador artístico
+occupation,Consultor de gestión
+occupation,Gerente
+occupation,Manicuro
+occupation,Fabricante
+occupation,Marino
+occupation,Vendedor
+occupation,Jardinero de huerto
+occupation,Artes marciales
+occupation,Albañil
+occupation,Masajista terapeutico
+occupation,Maestro de ceremonias (MC)
+occupation,Matador
+occupation,Ingeniero de materiales
+occupation,Científico de materiales
+occupation,Matemático
+occupation,Matrona
+occupation,Mecánico
+occupation,Ingeniero mecánico
+occupation,Mediador
+occupation,Médico
+occupation,Facturador médico
+occupation,Tecnólogo médico
+occupation,Transcriptor médico
+occupation,Hipnotizador
+occupation,Meteorólogo
+occupation,Microbiólogo
+occupation,Comadrona
+occupation,Lechero
+occupation,Fresador
+occupation,Minero
+occupation,Model
+occupation,Modelador
+occupation,Fabricante de moldes
+occupation,Cambiador de divisas
+occupation,Prestamista
+occupation,Monje
+occupation,Banquero hipotecario
+occupation,Corredor de hipotecas
+occupation,Funerario
+occupation,Rescatador alpino
+occupation,Alpinista
+occupation,Muralista
+occupation,Director de música
+occupation,Músico
+occupation,Niñera
+occupation,Navegante
+occupation,Comerciante de vino
+occupation,Negociador
+occupation,Neurocirujano
+occupation,Presentador de noticias
+occupation,Notario
+occupation,Novelista
+occupation,Ingeniero nuclear
+occupation,Numerólogo
+occupation,Numismático
+occupation,Monja
+occupation,Enfermero
+occupation,Cuidadora
+occupation,Oboista
+occupation,Obstetra
+occupation,Terapeuta ocupacional
+occupation,Odontólogo
+occupation,Ayudante de oficina
+occupation,Oncólogo
+occupation,Telefonista
+occupation,Oftalmólogo
+occupation,Optico
+occupation,Oráculo
+occupation,Marinero
+occupation,Organista
+occupation,Organizador
+occupation,Ornitólogo
+occupation,Ortodoncista
+occupation,Ortopedista
+occupation,mozo de cuadra
+occupation,Otorrinolaringólogo
+occupation,Pintor de brocha gorda
+occupation,Paleontólogo
+occupation,Instrutor de paracaidismo
+occupation,Paralegal
+occupation,Paramédico
+occupation,Guardaparques
+occupation,Abogado de patentes
+occupation,Examinador de patentes
+occupation,Patólogo
+occupation,Pediatra
+occupation,Edafólogo (suelo)
+occupation,Pedagogo
+occupation,Percusionista
+occupation,Perfumista
+occupation,Entrenador personal
+occupation,Farmacéutico
+occupation,Filántropo
+occupation,Filólogo
+occupation,Fotografo
+occupation,Fisioterapeuta
+occupation,Asistente Médico
+occupation,Físico
+occupation,Fisonomista
+occupation,Fisiólogo
+occupation,Fisioterapeuta
+occupation,Pianista
+occupation,Afinador de pianos
+occupation,Piloto
+occupation,Pirata
+occupation,Cirujano plástico
+occupation,Fontanero
+occupation,Poeta
+occupation,Policía (hombre)
+occupation,Policía (mujer)
+occupation,Oficial de policía
+occupation,Inspector de policía
+occupation,Politólogo
+occupation,Presentador
+occupation,Jefe de prensa
+occupation,Principal
+occupation,Impresor
+occupation,Detective privado
+occupation,Proctólogo
+occupation,Catedrático
+occupation,Profesional dominante
+occupation,Programador
+occupation,Jefe de Proyecto
+occupation,Corrector de pruebas
+occupation,Prostituta
+occupation,Psiquiatra
+occupation,Psicodramatista
+occupation,Psicólogo
+occupation,Relaciones Públicas
+occupation,Orador
+occupation,Radiólogo
+occupation,Radiógrafo
+occupation,Piloto de carreras
+occupation,Agente de bienes raíces
+occupation,Corredor de bienes raíces
+occupation,Inversionista de bienes raíces
+occupation,Desarrollador  de bienes raíces
+occupation,Recepcionista
+occupation,Productor discográfico
+occupation,Ingeniero de grabación
+occupation,Árbitro
+occupation,Registrador
+occupation,Profesor de apoyo
+occupation,Reportero
+occupation,Terapeuta respiratorio
+occupation,Restaurador
+occupation,Minorista
+occupation,Velero
+occupation,Ejecutivo de bajo sueldo
+occupation,Cocinero de salsas
+occupation,Saxofonista
+occupation,Aserrador
+occupation,Fabricante de vainas
+occupation,Conductor de transporte escolar
+occupation,Director de escuela
+occupation,Superintendente de escuela
+occupation,Científico
+occupation,Explorador
+occupation,Guionista
+occupation,Escriba
+occupation,Escultor
+occupation,Costurero
+occupation,Segundo de a bordo
+occupation,Agente del servicio secreto
+occupation,Secretaria
+occupation,Secretario general
+occupation,Funcionario
+occupation,Sexólogo
+occupation,Sacristán
+occupation,Trabajador sexual
+occupation,Esquilador
+occupation,Chamán
+occupation,Scott
+occupation,Alguacil
+occupation,Oficial de alguacil
+occupation,Cantante
+occupation,Trabajador social
+occupation,Sociólogo
+occupation,Arquitecto de software
+occupation,Ingeniero de software
+occupation,Gestor de proyectos de software
+occupation,Edafólogo
+occupation,Soldado
+occupation,Procurador de tribunales
+occupation,Sommelier
+occupation,Ingeniero de sonido
+occupation,Agente especial
+occupation,Especialista
+occupation,Logopeda
+occupation,Terapeuta deportivo
+occupation,Escenógrafo
+occupation,Estadístico
+occupation,Azafata/o
+occupation,Corredor de bolsa
+occupation,Gerente de local
+occupation,Artista callejero
+occupation,Músico callejero
+occupation,Vendedor callejero
+occupation,Stripper
+occupation,Ingeniero de estructuras
+occupation,Estudiante
+occupation,Coordinador de doblaje
+occupation,Doble especialista
+occupation,Actor de doblaje
+occupation,Cirujano
+occupation,Técnico quirúrgico
+occupation,Topógrafo
+occupation,Nadador
+occupation,Telefonista de centralita
+occupation,Administrador de sistemas
+occupation,Diseñador de sistemas
+occupation,Analista de sistemas
+occupation,Sastre
+occupation,Tapicero
+occupation,Recaudador de impuestos
+occupation,Taxidermista
+occupation,Taxónomo
+occupation,tea lady
+occupation,Profesor
+occupation,Técnico
+occupation,Tecnólogo
+occupation,Escrito técnico
+occupation,Telegrafista
+occupation,Telemarketer
+occupation,Operador telefónico
+occupation,Tenista
+occupation,Desarrollador de pruebas
+occupation,Piloto de pruebas
+occupation,Techador
+occupation,Director de teatro
+occupation,Teólogo
+occupation,Terapeuta
+occupation,Alicatador
+occupation,Fabricante de herramientas
+occupation,Abogado de marcas
+occupation,Comerciante
+occupation,Proveedor
+occupation,Planificador de tránsito
+occupation,Traductor
+occupation,Trigonometrista
+occupation,Camionero
+occupation,Afinador
+occupation,Tornero
+occupation,Tutor
+occupation,Ufólogo
+occupation,Agente encubierto
+occupation,Defensor
+occupation,Tapicero
+occupation,Urólogo
+occupation,Urbanista
+occupation,Ujier
+occupation,Aparcacoches
+occupation,Veterinario
+occupation,Vibrafonista
+occupation,Vicario
+occupation,Editor de videos
+occupation,Desarrollador de videojuegos
+occupation,Vinatero
+occupation,Violinista
+occupation,Violista
+occupation,Vocalista
+occupation,Camarero
+occupation,Tejedor
+occupation,Webmaster
+occupation,Desarrollador web
+occupation,Diseñador web
+occupation,Soldador
+occupation,Nodriza
+occupation,Tallador de madera
+occupation,Enólogo
+occupation,Escritor
+occupation,Xilofonista
+occupation,Técnico de Rayos X
+occupation,Joven trabajador
+occupation,Trabajador de zoo
+occupation,Zoólogo
+specialty,Anatomía
+specialty,Andrología
+specialty,Medicina Alternativa
+specialty,Anestesiología
+specialty,Bioquímica
+specialty,Cardiología
+specialty,Cirugía cardiovascular
+specialty,Ciencias de Laboratorio Clínico
+specialty,Neurofisiología clínica
+specialty,Dermatología
+specialty,Nutrición
+specialty,Embriología
+specialty,Medicina de emergencias
+specialty,Endocrinología
+specialty,Medicina Familiar
+specialty,Medicina Forense
+specialty,Gastroenterología
+specialty,Cirugía general
+specialty,Genética
+specialty,Geriatría
+specialty,Ginecología
+specialty,Hematología
+specialty,Hepatología
+specialty,Histología
+specialty,Inmunología
+specialty,Enfermedades infecciosas
+specialty,Medicina de cuidados intensivos
+specialty,Cirugía maxilofacial
+specialty,Nefrología
+specialty,Neurología
+specialty,Neurocirugía
+specialty,Enfermería
+specialty,Ginecología y Obstetricia
+specialty,Oncología
+specialty,Oftalmología
+specialty,Cirugía ortopédica
+specialty,Otorrinolaringología - ENT
+specialty,Cuidados paliativos
+specialty,Patología
+specialty,Pediatría
+specialty,Cirugía pediátrica
+specialty,Farmacología
+specialty,Medicina física y rehabilitación
+specialty,Cirugía plástica
+specialty,Proctología
+specialty,Psiquiatría
+specialty,Neumología
+specialty,Radiología
+specialty,logía
+specialty,Estomatología
+specialty,Oncología quirúrgica
+specialty,Cirugía torácica
+specialty,Toxicología
+specialty,Cirugía de transplantes
+specialty,Cirugía traumatológica
+specialty,Medicina de urgencia
+specialty,Urología
+specialty,Cirugía vascular
+specialty,Médico clínico
+specialty,Medicina Interna
+specialty,Terapia del habla / Fonoaudiología
+specialty,Psicología
+specialty,Medicina paliativa
+specialty,Medicina Integral
+specialty,Neonatología
+specialty,Cirugía Cardiotorácica
+specialty,Obstetricia
+specialty,Atención Primaria
+specialty,Planificación Familiar (Atención Primaria)
+specialty,Servicios Sociales
+specialty,Medicina Oral (Atención Primaria)
+specialty,Salud Infantil (Atención Primaria)
+specialty,Salud de la Mujer (Atención Primaria)

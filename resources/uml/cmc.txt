@@ -1,0 +1,37 @@
+@startuml
+
+	package ec.cjpq.core.model {
+		User --> Authorisation
+		Authorisation --> Role
+
+		Person --> GeneralTable
+		Canton <-- Person
+		Canton <-- MedicalCenter
+		Canton --> Province
+	}
+
+	package "ec.cjpq.cmc.model" #DDDDDD {
+		class MedicalCenter	
+
+		Identifiable <|-- Prescription
+		Identifiable <|-- PrescriptionDetail
+
+		Patient --> Person
+		Patient --> FamilyBackground
+		Patient --> GeneralTable
+		FamilyBackground --> Disease 
+		FamilyBackground --> GeneralTable
+
+		HealthProfessional --> Person
+		HealthProfessional --> GeneralTable
+
+		Prescription --> Patient 
+		Prescription --> HealthProfessional
+		Prescription -- PrescriptionDetail
+		
+		PrescriptionDetail --> Disease
+		PrescriptionDetail --> Medicament
+		PrescriptionDetail --> GeneralTable
+	}
+
+@enduml

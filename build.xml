@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+
+<project name="App" basedir="." default="deployWar">
+
+	<property name="project" value="App" />
+	<property name="ox3" value="true" />
+
+	<!-- <property name="home.dir" value="/home/carper" /> -->
+	<property name="home.dir" value="/home/knoppix" />
+	<property name="backup.dir" value="${home.dir}/Documentos/respaldos" />
+	<property name="local.dir" value="${home.dir}/local" />
+	<property name="ox.version" value="${local.dir}/openxava-4.3" />
+
+	<property name="ox.dir" value="${ox.version}/workspace/OpenXava" />
+	<property name="ox.lib.dir" value="${ox.dir}/lib" />
+	<property name="ox.web.lib.dir" value="${ox.dir}/web/WEB-INF/lib" />
+
+	<property name="lib.dir" value="web/WEB-INF/lib" />
+	<property name="class.dir" value="web/WEB-INF/classes" />
+	<property name="reports.dir" value="reports" />
+	<property name="clsTarget" value="target/App/WEB-INF/classes"/>
+	
+	<tstamp>
+		<format property="fecha" pattern="yyyy.MM.dd-HH.mm.ss" locale="es,EC"/>
+	</tstamp>
+	<property name="zip.file" value="${backup.dir}/${ant.project.name}-${fecha}-src.zip" />
+	
+	<property file="../openxava.properties"/>
+	
+	<!-- 
+	Compile all .java and .groovy 
+	Not needed to call it if you work inside Eclipse
+	-->
+	<target name="compile"> 
+		<ant antfile="../OpenXava/build.xml" target="compile"/>
+	</target>	    	
+	
+	<!-- 
+	Build and deploy the application in war format. 
+	It deploys it on the Tomcat included in OpenXava distribution, 
+	to deploy to other location modify the tomcat.dir property of workspace/openxava.properties.
+	-->	
+	<target name="deployWar">
+		<!-- In a directory -->
+		<ant antfile="../OpenXava/build.xml" target="deploy"/>
+		<!-- In a file (it does not work well on windows + tomcat)
+		<ant antfile="../OpenXava/build.xml" target="deployWar"/>
+		-->
+	</target>
+	
+	<!-- 
+	Build the application in war format.
+	Leaves the war in the workspace.dist/YourApplication.dist folder.
+	 -->	
+	<target name="createWar">
+		<ant antfile="../OpenXava/build.xml" target="createWar"/>
+	</target>				
+	
+	<!--
+	Build the application in portlets format 
+	-->		
+	<target name="generatePortlets"> 
+		<ant antfile="../OpenXava/build.xml" target="generatePortlets"/>
+	</target>
+	
+	<!--
+	Update this project with the latest OpenXava version present in the workspace.
+	It must be called just after update the OpenXava version.
+	-->
+	<target name="updateOX">
+		<ant antfile="../OpenXava/build.xml" target="updateOX"/>
+	</target>
+	
+	<!--
+	Connects to your database and updates your schema in order to match to your current application.
+	(Also you can use directly 'hibernatetool' ant task)
+	Remember to give value to schema.path with the path of the JDBC driver jar for your database.
+	-->
+	
+	<!-- H2 -->
+	<property name="sql.lib" 	value="${lib.dir}/h2-1.3.176.jar"/>
+	<property name="sql.driver" value="org.h2.Driver"/>
+	<!-- <property name="sql.url" 	value="jdbc:h2:tcp://localhost/~/data/app"/> -->
+	<property name="sql.url" 	value="jdbc:h2:file:~/app"/>
+	<property name="sql.user" 	value="sa"/>
+	<property name="sql.pass" 	value=""/>
+
+	<!-- PostgreSQL
+	<property name="sql.lib" 	value="${ox.version}/tomcat/lib/postgresql-9.3-1102.jdbc4.jar" />
+	<property name="sql.driver" value="org.postgresql.Driver"/>
+	<property name="sql.url" 	value="jdbc:postgresql://localhost:5432/fe"/>
+	<property name="sql.user" 	value="sa"/>
+	<property name="sql.pass" 	value=""/>
+	-->
+
+	<!-- HSQLDB 
+	<property name="sql.tool" 	value="${local.dir}/hsqldb-2.3.4/hsqldb/lib/sqltool.jar"/>
+	<property name="sql.lib" 	value="../OpenXava/lib/hsqldb.jar"/>
+	<property name="sql.driver" value="org.hsqldb.jdbcDriver"/>
+	<property name="sql.url" 	value="jdbc:hsqldb:hsql://localhost:1666"/>
+	<property name="sql.user" 	value="SA"/>
+	<property name="sql.pass" 	value=""/>
+	-->	
+
+	<!-- <property name="sql.url" 	value="jdbc:hsqldb:file:../data/app-db"/> -->
+	
+	<property name="sql.dir" 	value="resources/sql"/>
+	
+	<target name="updateSchema">
+		<ant antfile="../OpenXava/build.xml" target="updateSchemaJPA">			
+			<property name="persistence.unit" value="junit"/>
+			<!-- <property name="schema.path" value="PUT HERE THE PATH OF YOUR JDBC DRIVER"/> -->
+
+			<property name="schema.path" value="${sql.lib}"/>
+		</ant>
+	</target>	
+	
+	<target name="h2-run">
+		<java classname="org.h2.tools.Server" classpath="${sql.lib}" fork="true">
+			<arg line="-tcp -web"/>
+		</java>
+	</target>
+
+	<target name="hsqldb-run">
+		<java classname="org.hsqldb.Server" classpath="${sql.lib}" fork="true">
+			<arg line="-database ${ox.version}/tomcat/data/app-db -port 1666 -silent true -trace false"/>
+		</java>
+	</target>
+
+	<target name="sql-insert">
+		<sql classpath="${sql.lib}"
+			driver="${sql.driver}" 
+			url="${sql.url}" 
+			userid="${sql.user}" password="${sql.pass}" 
+			print="yes"
+			src="${sql.dir}/insert.sql">
+		</sql>
+	</target>
+
+	<target name="sql-query">
+		<sql classpath="${sql.lib}"
+			driver="${sql.driver}" 
+			url="${sql.url}" 
+			userid="${sql.user}" password="${sql.pass}" 
+			print="yes"
+			src="${sql.dir}/query.sql">
+		</sql>
+	</target>
+
+	<target name="sql-import-h2">
+		<sql classpath="${sql.lib}"
+			encoding="utf-8"
+			driver="${sql.driver}" 
+			url="${sql.url}" 
+			userid="${sql.user}" password="${sql.pass}" 
+			print="yes"
+			src="${sql.dir}/import_h2.sql">
+		</sql>
+	</target>
+
+	<!--
+	<target name="sql-import-hsql">
+		<sql classpath="${sql.lib}"
+			encoding="utf-8"
+			driver="${sql.driver}" 
+			url="${sql.url}" 
+			userid="${sql.user}" password="${sql.pass}" 
+			print="yes"
+			src="${sql.dir}/import_hsql.sql">
+		</sql>
+	</target>
+	-->
+		
+	<target name="delete-Db">
+		<delete file="${home.dir}/data/app.h2.db"/>
+	</target>
+						
+	<target name="updateClass" depends="compile">
+		<copy todir="${clsTarget}">
+			<fileset dir="${class.dir}">
+				<include name="**/*.properties" />
+				<include name="**/*.class"/>
+				<include name="**/*.xml"/>
+				<exclude name="**/*.swp"/>
+			</fileset>
+			<fileset dir="${reports.dir}">
+				<include name="**/*.jrxml" />
+			</fileset>
+		</copy>
+		<copy todir="${class.dir}">
+			<fileset dir="${reports.dir}">
+				<include name="**/*.jrxml" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!--
+	<target name="menu">
+		<echo message="1. compile"/>
+
+		<input message="Tarea a ejecutar: "
+			validargs="1,2,3,4,5,6"
+			defaultvalue="0"
+			addproperty="menu.option"
+		/>
+		
+		<condition property="select1">
+			<equals arg1="1" arg2="${menu.option}"/>
+		</condition>
+	</target>
+	-->
+	
+	<!-- MENU INTERACTIVO PARA EJECUTAR TAREAS -->
+	
+	<property name="antform.home" value="${local.dir}/javaDev/antform-bin-2.0" />
+
+	<taskdef name="antform" classname="com.sardak.antform.AntForm" 
+		classpath="${antform.home}/lib/antform.jar"/>
+	<taskdef name="antmenu" classname="com.sardak.antform.AntMenu" 
+		classpath="${antform.home}/lib/antform.jar"/>
+
+	<target name="menu">
+		<antmenu image="resources/img/1409468548_linux.png" title="Task's menu" loop="true" >
+			<button label="delete-App"       target="delete-App"/>
+			<button label="delete-Db"        target="delete-Db"/>
+			<button label="compile"          target="compile"/>
+			<button label="updateSchema"     target="updateSchema"/>
+			<button label="updateClass"      target="updateClass"/>
+			<button label="deployWar"        target="deployWar"/>
+			<button label="generatePortlets" target="generatePortlets"/>
+			<button label="sql-import-h2"    target="sql-import-h2"/>
+			<button label="sql-query"        target="sql-query"/>
+			<button label="test"             target="test"/>
+			<button label="Exit"             loopexit="true"/>
+        </antmenu>
+
+		<!--
+		<antmenu title="carper's menu of ant tasks" loop="true" height="50">
+			<AntMenuItem name="delete-App"    target="delete-App"/>
+			<AntMenuItem name="delete-Db"     target="delete-Db"/>
+			<AntMenuItem name="compile"       target="compile"/>
+			<AntMenuItem name="updateSchema"  target="updateSchema"/>
+			<AntMenuItem name="updateClass"   target="updateClass"/>
+			<AntMenuItem name="deployWar"     target="deployWar"/>
+			<AntMenuItem name="sql-import-h2" target="sql-import-h2"/>
+			<AntMenuItem name="sql-query"     target="sql-query"/>
+			<AntMenuItem name="test"          target="test"/>
+			<AntMenuItem name="Exit"          loopexit="true"/>
+        </antmenu>
+		-->
+
+	</target>
+
+	<!-- Ejecutar Test Suite -->
+	<path id="master-classpath" description="Master CLASSPATH for this script">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${ox.lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<!--
+		<fileset dir="${ox.web.lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		-->
+		<pathelement location="${class.dir}/" />
+	</path>
+
+	<target name="test" depends="compile">
+		<junit printsummary="true" showoutput="yes" filtertrace="false">
+			<classpath refid="master-classpath" />
+			<batchtest fork="yes">
+				<formatter type="plain" />
+				<fileset dir="${class.dir}">
+					<include name="**/AppTestSuite.class" />
+
+					<!--
+					<include name="**/CodeTest.class" />
+					<exclude name="**/HibernateTest.class" />
+					<exclude name="**/SpringTest.class" />
+					<exclude name="**/AllTests.class" />
+					-->
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+	
+	<target name="zip">
+		<zip destfile="${zip.file}">
+			<fileset dir="." excludes="target/, web/WEB-INF/classes/, web/WEB-INF/lib/"/>
+		</zip>
+	</target>
+
+</project>

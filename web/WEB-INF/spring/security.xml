@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<b:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<authentication-manager>
+		<authentication-provider>
+			<jdbc-user-service 
+				data-source-ref="dataSource" 
+				users-by-username-query="SELECT username,password,active FROM user WHERE username = ?"
+				authorities-by-username-query="SELECT user_username, r.description FROM user_authorisation, role r WHERE role_id = r.id and user_username = ?"
+			/>
+		</authentication-provider> 
+	</authentication-manager>  
+
+	<http realm="App Realm">
+        <intercept-url pattern="/" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/index.jsp" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/hello.htm" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/login.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+
+		<!-- default url -->
+		<intercept-url pattern="/xava/homeMenu.jsp" access="ROLE_USER"/>
+		<intercept-url pattern="/xava/**/*.jsp" access="ROLE_NOT_PRESENT"/>
+
+		<intercept-url pattern="/MenuModules/User" access="ROLE_ADMIN"/>
+        <intercept-url pattern="/MenuModules/Role" access="ROLE_ADMIN"/>
+        <intercept-url pattern="/MenuModules/GeneralTable" access="ROLE_ADMIN"/>
+        <intercept-url pattern="/MenuModules/Province" access="ROLE_ADMIN"/>
+        <intercept-url pattern="/MenuModules/Canton" access="ROLE_ADMIN"/>
+
+        <intercept-url pattern="/MenuModules/Cmc*" access="ROLE_ADMIN,ROLE_CMC"/>
+
+        <intercept-url pattern="/MenuModules/Prescription" access="ROLE_ADMIN"/>
+
+		<intercept-url pattern="/MenuModules/**" access="ROLE_USER"/>
+
+		<form-login login-page="/login.jsp" authentication-failure-url="/login.jsp?login_error=1"/>
+		<http-basic/>
+        <logout logout-success-url="/index.jsp"/>
+        <remember-me />
+        <access-denied-handler error-page="/accessDenied.jsp"/>
+    </http>
+
+	<b:bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<b:property name="jndiName"><b:value>java:comp/env/jdbc/AppDS</b:value></b:property>
+	</b:bean>    
+
+</b:beans>

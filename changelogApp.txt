@@ -1,0 +1,105 @@
+TODO
+
+	uzbl http://localhost:8080/App
+
+	165:30
+
+	Subir la app en la nube
+
+	Agregar la foto de la persona en paciente
+	Validar mensaje de error al grabar un registro duplicado en correo
+	electrónico (unique)
+	
+	2016-09-21
+	En estación de enfermería, preparación: Llega el paciente y le preguntan el nombre, la edad, peso, temperatura y
+	posteriormente se asigna el turno.
+
+DONE
+	2020-09-06
+	Actualizar ecj-4.2.2.jar en carpeta de tomcat de openxava
+	https://stackoverflow.com/questions/21852215/in-my-project-i-found-this-exception-org-eclipse-jdt-internal-compiler-classfmt
+
+	2017-03-07
+	Arrancar h2 con datos iniciales con Hibernate 
+
+	2017-03-05
+	Ajustes para compilar Addons.jar en Java 1.7
+
+	2017-03-04
+	Arrancar h2 en server mode
+
+	2017-03-02
+	Zip exluyendo los jars
+	Terminar el menú para gestión médica (mainNavigation.jsp)
+
+	2017-02-02:
+	Poner los campos completos en la búsqueda del paciente en prescripciones
+
+	2017-01-27:
+	Agregar tabla de dieta en prescripciones
+
+	0997794999 Don Pepe
+
+	https://www.propiedadintelectual.gob.ec/
+
+	/home/carper/local/openxava-5.3.2/tomcat/logs/localhost.2017-03-07.log
+	/home/carper/local/openxava-5.3.2/tomcat/logs/catalina.2017-03-07.log
+
+	* URL:
+		http://localhost:8080/App
+		
+		http://localhost:8080/App/modules/User
+		
+		http://servername:port/applicationcontext/xava/module.jsp?application=appName&module=moduleName
+		http://localhost:8080/App/xava/module.jsp?application=App&module=User
+	
+	Que ningún pagano te juzgue
+	Comentario en Exo 21:28
+
+
+	* Crear WAR:
+		mvn war:war
+
+	* Crear JAR:
+		ant
+		mvn package
+	
+	* Configurar externamente:
+		/home/carper/local/openxava-5.3.2/tomcat/conf/context.xml
+		/home/carper/Documentos/proyectos/openxava/532/App/target/App/WEB-INF/web.xml
+		/home/carper/Documentos/proyectos/openxava/532/App/target/App/WEB-INF/spring/context.xml
+
+		/home/carper/local/openxava-5.6.1/workspace/OpenXava/web/WEB-INF/web.xml
+		/home/carper/local/openxava-5.6.1/workspace/Addons/web/index.jsp
+		vs
+		/home/carper/local/openxava-5.6.1/tomcat/conf/context.xml
+		/home/carper/local/openxava-5.6.1/tomcat/webapps/App/WEB-INF/classes/META-INF/persistence.xml
+		/home/carper/local/code/openXavaSpringSecurity/conference/web/WEB-INF/web.xml
+		/home/carper/local/code/java/springsecurity/pom.xml
+
+		/home/carper/local/openxava-5.6.1/tomcat/webapps/App/WEB-INF/web.xml
+
+Configuraciones
+
+	* Base de datos:
+		http://localhost:8080/App
+
+	* Configuración de OX:
+		cd /home/carper
+		ln -s /home/carper/Documentos/proyectos/openxava/App/resources/data
+		ln -s /home/carper/Documentos/proyectos/openxava/532/App/resources/data
+
+		ln -s /home/carper/local/openxava-5.6.1/workspace/Addons
+		ln -s /home/carper/local/openxava-5.6.1/workspace/OpenXava
+		ln -s /home/carper/local/openxava-5.6.1/workspace/OpenXavaTest
+		
+		/home/carper/local/openxava-5.6.1/tomcat/conf/context.xml
+		
+		<Resource name="jdbc/AppDS" auth="Container" type="javax.sql.DataSource"
+			  maxActive="20" maxIdle="5" maxWait="10000"
+			  username="sa" password="" driverClassName="org.h2.Driver"
+			  url="jdbc:h2:tcp://localhost/~/data/app"/>
+
+	* Pruebas unitarias:
+		Desactivar naviox como indica la sección Migration from OpenXava 4.9.1 to OpenXava 5.0 User login affects your jUnit tests del enlace:
+		https://openxava.wikispaces.com/migration_en
